@@ -26,12 +26,23 @@ body {
 }
 
 #score {
+  margin-right: 5%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#par{
+  margin: 0;
+}
+
+.row{
   position: absolute;
-  top: 60%;
+  top: 80%;
   left: 0;
   width: 100%;
-  text-align: right;
-  font-size: 500%;
   background-color: rgba(0, 0, 0, 0.5);
+  text-align: right;
+  font-size: 300%;
   color: #caffac;
+  margin: 0;
 }
