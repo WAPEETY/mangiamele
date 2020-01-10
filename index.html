@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<meta name="viewport" content= "width=device-width, user-scalable=no">
+
+<html>
+        <head>
+          <!--Custom CSS-->
+          <link rel="stylesheet" href="css/style.css">
+                <title> Lapenna Simulator </title>
+                <script>
+var score = 0
+var eatapples = 0
+var i = 1;
+var start_width = 0
+var start_height = 0
+function mangia_mela() {
+        score++
+        start_width = $("#apple").width()
+        start_height = $("#apple").height()
+        if(i == 0){
+          document.getElementById("apple").src = "img/apple/apple0.png";
+        }
+        if(i == 1){
+          document.getElementById("apple").src = "img/apple/apple1.png";
+        }
+        if(i == 2){
+          document.getElementById("apple").src = "img/apple/apple2.png";
+        }
+        if(i == 3){
+          document.getElementById("apple").src = "img/apple/apple3.png";
+        }
+        if(i == 4){
+          i=-1
+          document.getElementById("apple").src = "img/apple/apple4.png";
+        }
+        else{
+
+        }
+        i++
+        if(score % 5 == 0){
+          eatapples++
+        }
+        document.getElementById("score").innerHTML = eatapples
+
+        $("#apple").animate({
+          width: start_width * 2,
+          height: start_height * 2
+        }, 50)
+
+        $("#apple").animate({
+          width: start_width,
+          height: start_height
+        }, 50)
+
+        document.getElementById("score").disabled = false
+}
+                </script>
+        </head>
+        <body>
+          <p id='score'>0</p>
+          <div class="center-div mela">
+            <img id="apple"   onclick='mangia_mela()' class="responsive center-div" src="img/apple/apple0.png" alt="">
+          </div>
+        </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
+</html>
