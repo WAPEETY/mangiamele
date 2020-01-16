@@ -1,8 +1,7 @@
 body {
-  background-image: url("../img/background.jpg");
+  background-color: #333;
   background-size: cover;
 }
-
 .center-div
 {
   position: absolute;
